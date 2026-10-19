@@ -9,16 +9,28 @@ public class player_control : MonoBehaviour
 
     public Vector2 moveInput;
 
+    private Animator animator;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+
+        animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (moveInput != Vector2.zero)
+        {
+            animator.SetBool("walk_down", true);
+        }
+        else
+        {
+            animator.SetBool("walk_down", false);
+        }
     }
     private void FixedUpdate()
     {
