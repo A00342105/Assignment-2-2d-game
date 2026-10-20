@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -29,6 +30,10 @@ public class player_control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetBool("walk_left", false);
+        animator.SetBool("walk_up", false);
+        animator.SetBool("walk_down", false);
+
         if (moveInput == Vector2.right)
         {
             animator.SetBool("walk_left", true);
@@ -67,4 +72,12 @@ public class player_control : MonoBehaviour
     {
         moveInput = value.Get<Vector2>();
     }
+
+    void OnFire()
+    {
+        animator.SetTrigger("attack_left");
+    }
+    
+
+
 }
