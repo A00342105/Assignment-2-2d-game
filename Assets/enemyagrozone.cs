@@ -10,16 +10,40 @@ public class enemyagrozone : MonoBehaviour
     private Rigidbody2D enemyrigidbody;
    private Vector2 calculatedirection;
     private bool targetdetected = false;
+
+    private Animator enemyanimtor;
+    private SpriteRenderer spriteRender;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         enemyrigidbody = enemy.GetComponent<Rigidbody2D>();
+
+        enemyanimtor = enemy.GetComponent<Animator>();
+
+        spriteRender = enemy.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
-    {
-        
+    { 
+        if (targetdetected)
+        {
+            enemyanimtor.SetBool("walk_left", true);
+
+            if (calculatedirection.x < 0)
+            {
+                spriteRender.flipX = true;
+            }
+            else
+            {
+                spriteRender.flipX = false;
+            }
+        }
+        else
+        {
+            enemyanimtor.SetBool("walk_left", false);
+        }
     }
 
     private void FixedUpdate()
