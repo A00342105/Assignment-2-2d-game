@@ -1,10 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
+using TMPro;
 
 public class playerinvetory : MonoBehaviour
 {
 
+
+
     public int coins = 0;
+    public TextMeshProUGUI cointext;
+    public GameObject door;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,7 +20,12 @@ public class playerinvetory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        cointext.text = "coin count: "+ coins.ToString();
+         if(coins >= 50)
+        {
+            Destroy(door);
+        }
+
     }
 
 
@@ -41,7 +52,8 @@ public class playerinvetory : MonoBehaviour
     {
         if (collision.collider.tag == "collectable")
         {
-            Debug.Log("collided ended with: " + collision.collider.name);
+            
+           // Debug.Log("collided ended with: " + collision.collider.name);
         }
             
     }

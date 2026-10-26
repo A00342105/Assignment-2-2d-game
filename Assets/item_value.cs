@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class item_value : MonoBehaviour
 {
@@ -13,6 +14,6 @@ public class item_value : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+     
     }
 }
