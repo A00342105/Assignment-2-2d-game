@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 844249318793679940}
   - component: {fileID: 504462259309053795}
   - component: {fileID: 4048880227543061099}
+  - component: {fileID: 8037222064917556645}
   m_Layer: 0
   m_Name: Skeleton_0 1
   m_TagString: Untagged
@@ -281,3 +282,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   plyhealth: {fileID: 0}
   enemydamag: 10
+--- !u!114 &8037222064917556645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8914163979943111541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9470ed6c9b70e44823d2c0d54e9652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  health: 50
+  currenthealth: 0

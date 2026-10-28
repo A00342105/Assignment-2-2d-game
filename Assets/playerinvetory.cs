@@ -11,6 +11,8 @@ public class playerinvetory : MonoBehaviour
     public int coins = 0;
     public TextMeshProUGUI cointext;
     public GameObject door;
+    public GameObject door1;
+    public GameObject door2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,6 +26,8 @@ public class playerinvetory : MonoBehaviour
          if(coins >= 50)
         {
             Destroy(door);
+            Destroy(door1);
+            Destroy(door2);
         }
 
     }

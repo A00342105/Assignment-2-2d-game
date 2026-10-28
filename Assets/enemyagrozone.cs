@@ -70,6 +70,10 @@ public class enemyagrozone : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (target == null)
+        {
+            return;
+        }
         if (collision.name.Equals(target.name))
         {
             targetdetected = false;
