@@ -23,7 +23,7 @@ public class playerinvetory : MonoBehaviour
     void Update()
     {
         cointext.text = "coin count: "+ coins.ToString();
-         if(coins >= 50)
+         if(coins == 75)
         {
             Destroy(door);
             Destroy(door1);
