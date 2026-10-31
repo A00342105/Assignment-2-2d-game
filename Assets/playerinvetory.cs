@@ -56,13 +56,10 @@ public class playerinvetory : MonoBehaviour
     {
         if (collision.collider.tag == "collectable")
         {
-            
-           // Debug.Log("collided ended with: " + collision.collider.name);
+
+            // Debug.Log("collided ended with: " + collision.collider.name);
         }
-            
+
     }
-
-
-
-
+    
 }

@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 public class playerhealth : MonoBehaviour
@@ -50,6 +51,17 @@ public class playerhealth : MonoBehaviour
 
         }
 
+    }
+    public void heal(float amount)
+    {
+        if (isdead) return;
+
+        health += amount;
+
+        if (health > maxhealth)
+        {
+            health = maxhealth;
+        }
     }
 
 }

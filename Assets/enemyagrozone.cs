@@ -29,7 +29,7 @@ public class enemyagrozone : MonoBehaviour
     { 
         if (targetdetected)
         {
-            enemyanimtor.SetBool("walk_left", true);
+            enemyanimtor.SetBool("walk", true);
 
             if (calculatedirection.x < 0)
             {
@@ -42,7 +42,7 @@ public class enemyagrozone : MonoBehaviour
         }
         else
         {
-            enemyanimtor.SetBool("walk_left", false);
+            enemyanimtor.SetBool("walk", false);
         }
     }
 
